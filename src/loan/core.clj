@@ -90,22 +90,6 @@
                                   monthly-total))]
     (long (reduce + monthly-totals))))
 
-(defn cal-debx-month-money
-  [loan-amount monthly-rate loan-month]
-  (let [tmp (Math/pow (+ 1 monthly-rate) loan-month)
-        fenzi (* monthly-rate tmp)
-        fenmu (- tmp 1)]
-    (/ (* loan-amount fenzi) fenmu)))
-
-(defn cal-debj-month-money
-  "参数说明:
-      month-idx 这是开始还款后的第几个月, 从0开始算"
-  [total-principal monthly-rate loan-month month-idx]
-  (let [monthly-principal (/ total-principal loan-month)
-        rest-principal (- total-principal (* monthly-principal month-idx))
-        monthly-interest (* rest-principal monthly-rate)]
-    (+ monthly-principal monthly-interest)))
-
 (comment
   (cal-debx-month-money 500000 0.01 360)
   (cal-debj-month-money 500000 0.01 360 3)
