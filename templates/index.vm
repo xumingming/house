@@ -36,7 +36,7 @@
       </table>
     </form>
 
-    <div id="chartdiv" style="width: 90%; height: 500px;"></div>
+    <div id="chartdiv" style="padding-left: 100px;width: 90%; height: 500px;"></div>
     <table border="1" width="100%">
       <tr class="bold">
         <td></td>
@@ -105,6 +105,7 @@ AmCharts.ready(function() {
     var categoryAxis = chart.categoryAxis;
     categoryAxis.gridAlpha = 0;
     categoryAxis.title = "sdf";
+
 
     chart.zoomOutButton = {
         backgroundColor: '#000000',
