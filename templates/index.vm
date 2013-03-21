@@ -1,0 +1,139 @@
+<html>
+  <head>
+    <title>公积金贷款计算器</title>
+  </head>
+  <body>
+    <form method="GET" action="/">
+      <table>
+        <tr>
+          <td>贷款本金</td>
+          <td>
+            <input type="text" name="tp" value="$total-principal">
+          </td>
+        </tr>
+        <tr>
+          <td>月利率</td>
+          <td>
+            <input type="text" name="mr" value="$monthly-rate">
+          </td>
+        </tr>
+        <tr>
+          <td>贷款月数</td>
+          <td>
+            <input type="text" name="lm" value="$loan-month">
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="submit" value="画线">
+          </td>
+      </table>
+    </form>
+
+    <div id="chartdiv" style="width: 100%; height: 500px;"></div>
+    <table border="1" width="100%">
+      <tr>
+        <td></td>
+        <td colspan="4" align="center">等额本金贷款(一共需要还$debj-total)</td>
+        <td></td>
+        <td colspan="4" align="center">等额本息贷款(一共需要还$debx-total)</td>
+      </tr>
+      <tr>
+        <td>月份</td>
+        <td>本金</td>
+        <td>利息</td>
+        <td>本金 + 利息</td>
+        <td>贷款余额</td>
+        <td></td>
+        <td>本金</td>
+        <td>利息</td>
+        <td>本金 + 利息</td>
+        <td>贷款余额</td>
+      </tr>
+#foreach($month in $monthes)
+      <tr>
+        <td>${month}</td>
+        <td>$debj-pay-flow.get($month).get("monthly-principal")</td>
+        <td>$debj-pay-flow.get($month).get("monthly-interest")</td>
+        <td>$debj-pay-flow.get($month).get("monthly-total")</td>
+        <td>$debj-pay-flow.get($month).get("rest-principal")</td>
+        <td></td>
+        <td>$debx-pay-flow.get($month).get("monthly-principal")</td>
+        <td>$debx-pay-flow.get($month).get("monthly-interest")</td>
+        <td>$debx-pay-flow.get($month).get("monthly-total")</td>
+        <td>$debx-pay-flow.get($month).get("rest-principal")</td>
+      </tr>
+#end
+    </table>
+
+    <script src="http://www.amcharts.com/lib/amcharts.js" type="text/javascript"></script>
+    <script>
+var chart;
+var graph;
+
+var chartData = [
+#foreach($month in $monthes)
+    #if($velocityCount != 1),#end
+    {month: ${month},
+     moneyDebj: $debj-pay-flow.get($month).get("monthly-total"),
+     moneyDebx: $debx-pay-flow.get($month).get("monthly-total")}
+#end
+];
+
+function zoomChart() {
+    // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+    chart.zoomToCategoryValues(2000, 3000);
+}
+AmCharts.ready(function() {
+    // SERIAL CHART
+    chart = new AmCharts.AmSerialChart();
+    chart.dataProvider = chartData;
+    chart.autoMargins = false;
+    chart.marginLeft = 10;
+    chart.marginRight = 10;    
+    chart.marginBottom = 25;
+    chart.marginTop = 0;
+    
+    // category
+    chart.categoryField = "month";
+    chart.zoomOutButton = {
+        backgroundColor: '#000000',
+        backgroundAlpha: 0.15
+    };
+    chart.addListener("dataUpdated", zoomChart);
+
+    var valueAxisDebj = new AmCharts.ValueAxis();
+    valueAxisDebj.axisAlpha = 0;
+    valueAxisDebj.inside = true;
+    valueAxisDebj.axisColor = "red"
+    chart.addValueAxis(valueAxisDebj);
+
+    // 等额本息线
+    graph = new AmCharts.AmGraph();
+    graph.type = "smoothedLine"; // this line makes the graph smoothed line.
+    graph.lineColor = "blue";
+    graph.bullet = "round";
+    graph.bulletSize = 5;
+    graph.lineThickness = 1;
+    graph.valueField = "moneyDebx";
+    chart.addGraph(graph);
+
+    // 等额本金线
+    graph1 = new AmCharts.AmGraph();
+    graph1.type = "smoothedLine"; // this line makes the graph smoothed line.
+    graph1.lineColor = "red";
+    graph1.bullet = "round";
+    graph1.bulletSize = 5;
+    graph1.lineThickness = 2;
+    graph1.valueField = "moneyDebj";
+    chart.addGraph(graph1);
+
+    // WRITE
+    chart.write("chartdiv");
+});
+
+
+
+    </script>
+  </body>
+</html>
