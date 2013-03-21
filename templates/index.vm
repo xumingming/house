@@ -36,7 +36,7 @@
       </table>
     </form>
 
-    <div id="chartdiv" style="width: 100%; height: 500px;"></div>
+    <div id="chartdiv" style="width: 90%; height: 500px;"></div>
     <table border="1" width="100%">
       <tr class="bold">
         <td></td>
@@ -102,6 +102,10 @@ AmCharts.ready(function() {
     
     // category
     chart.categoryField = "month";
+    var categoryAxis = chart.categoryAxis;
+    categoryAxis.gridAlpha = 0;
+    categoryAxis.title = "sdf";
+
     chart.zoomOutButton = {
         backgroundColor: '#000000',
         backgroundAlpha: 0.15
@@ -111,7 +115,8 @@ AmCharts.ready(function() {
     var valueAxisDebj = new AmCharts.ValueAxis();
     valueAxisDebj.axisAlpha = 0;
     valueAxisDebj.inside = true;
-    valueAxisDebj.axisColor = "red"
+    valueAxisDebj.axisColor = "red";
+    valueAxisDebj.title = "Money";
     chart.addValueAxis(valueAxisDebj);
 
     // 等额本息线
@@ -122,6 +127,8 @@ AmCharts.ready(function() {
     graph.bulletSize = 5;
     graph.lineThickness = 1;
     graph.valueField = "moneyDebx";
+    graph.title = "测试";
+    graph.legendValueText = "adf";
     chart.addGraph(graph);
 
     // 等额本金线
@@ -133,6 +140,12 @@ AmCharts.ready(function() {
     graph1.lineThickness = 2;
     graph1.valueField = "moneyDebj";
     chart.addGraph(graph1);
+
+    // CURSOR
+    var chartCursor = new AmCharts.ChartCursor();
+    chartCursor.cursorAlpha = 0;
+    chartCursor.cursorPosition = "mouse";
+    chart.addChartCursor(chartCursor);
 
     // WRITE
     chart.write("chartdiv");
