@@ -1,4 +1,4 @@
-(ns loan.core
+(ns house.loan
   (:import [java.lang Math]))
 
 (defprotocol Loan

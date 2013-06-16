@@ -8,7 +8,7 @@
                  [ring.velocity "0.1.2"]]
   :resource-paths ["conf" "templates"]
   :plugins [[lein-ring "0.8.2"]]
-  :ring {:handler loan.handler/app}
+  :ring {:handler house.handler/app}
   :aot :all
   :profiles
   {:dev {:dependencies [[ring-mock "0.1.3"]]}})

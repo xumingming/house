@@ -1,4 +1,4 @@
-(ns loan.handler
+(ns house.handler
   (:use compojure.core)
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
@@ -33,6 +33,7 @@
                  :debj-pay-flow debj-pay-flow
                  :debj-total debj-total
                  :monthes (range loan-month))))
+  (GET "/" [] (str "test"))
   (route/resources "/")
   (route/not-found "Not Found"))
 
