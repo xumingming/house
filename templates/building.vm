@@ -19,7 +19,7 @@
         <td>
           <select id="buildings">
             #foreach ($key in $id-to-name.keySet())
-            <option value="$key" #if ($key == $id)selected#end>
+            <option value="$key" #if ($key == $building.get("id"))selected#end>
               $id-to-name.get($key)
             </option>
             #end
