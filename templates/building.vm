@@ -6,6 +6,11 @@
         window.location = document.location.origin + "/building/" + $('#buildings').val();
       }
     </script>
+    <style>
+      .title {
+        background-color: #DDDDDD;
+      }
+    </style>
   </head>
 
   <body>
@@ -27,61 +32,61 @@
     </table>
 
     <br/>
-  <table width="80%" align="center" border="1">
+  <table width="100%" align="center" border="1">
     <tr>
-      <td>楼盘名字</td>
+      <td class="title">楼盘名字</td>
       <td>$building.get("name")</td>
     </tr>
     <tr>
-      <td>地段</td>
+      <td class="title">地段</td>
       <td>$building.get("loc")</td>
     </tr>
     <tr>
-      <td>投资商</td>
+      <td class="title">投资商</td>
       <td>$building.get("touzishan")</td>
     </tr>
     <tr>
-      <td>开发商</td>
+      <td class="title">开发商</td>
       <td>$building.get("kaifashan")</td>
     </tr>
     <tr>
-      <td>物业</td>
+      <td class="title">物业</td>
       <td>$building.get("wuye")</td>
     </tr>
     <tr>
-      <td>物业费</td>
+      <td class="title">物业费</td>
       <td>$building.get("wuyefei")</td>
     </tr>
     <tr>
-      <td>价格</td>
+      <td class="title">价格</td>
       <td>$building.get("price")</td>
     </tr>
     <tr>
-      <td>教育配套</td>
+      <td class="title">教育配套</td>
       <td>$building.get("edu")</td>
     </tr>
     <tr>
-      <td>交通</td>
+      <td class="title">交通</td>
       <td>$building.get("jiaotong")</td>
     </tr>
     <tr>
-      <td>开盘时间</td>
+      <td class="title">开盘时间</td>
       <td>$building.get("kaipan-date")</td>
     </tr>
     <tr>
-      <td>交付时间</td>
+      <td class="title">交付时间</td>
       <td>$building.get("jiaofu-date")</td>
     </tr>
     <tr>
-      <td>绿化率</td>
+      <td class="title">绿化率</td>
       <td>${building.get("lvhualv")}%</td>
     </tr>
     <tr>
-      <td>容积率</td>
+      <td class="title">容积率</td>
       <td>$building.get("rongjilv")</td>
     </tr>
     <tr>
-      <td>公摊面积</td>
+      <td class="title">公摊面积</td>
       <td>$building.get("gongtanmianji")</td>
     </tr>
  
