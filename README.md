@@ -1,12 +1,12 @@
-# loan
+## house
 
-中国公积金贷款计算器
+与买房相关的种种
 
 ## Usage
 
 ```bash
-git clone https://github.com/xumingming/loan.git
-cd loan
+git clone https://github.com/xumingming/house.git
+cd house
 lein ring server
 ```
 
