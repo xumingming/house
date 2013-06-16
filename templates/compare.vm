@@ -1,8 +1,9 @@
 <html>
   <head>
+    <title>compare</title>
     <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.0.min.js"></script>
     <script>
-      function goto() {
+      function goto_compare() {
         var buildings = $('#buildings').val().join("__");
         window.location = document.location.origin + "/compare/" + buildings;
       }
@@ -16,6 +17,7 @@
   </head>
 
   <body>
+    #parse("links.vm")
     <table align="left">
       <tr>
         <td>
@@ -28,7 +30,7 @@
           </select>
         </td>
         <td>
-          <input type="button" value="go" onclick="javascript:goto();"/>
+          <input type="button" value="go" onclick="javascript:goto_compare();"/>
         </td>
       </tr>
     </table>
