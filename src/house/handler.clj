@@ -36,18 +36,29 @@
                  :debj-total debj-total
                  :monthes (range loan-month))))
   (GET "/" [] (str "test"))
-  (GET "/building/:name" [name]
-       (let [building (buildings name)
-             building (into {} (map (fn [[key value]] [(clojure.core/name key) value]) building))
+  (GET "/building/:building-id" [building-id]
+       (let [building (buildings building-id)
+             building (into {} (for [[key value] building]
+                                            [(name key) value]))
              id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
          (println building)
          (render "building.vm"
                  :id-to-name id->name
                  :building building)))
+  
   (GET "/compare/:building-ids" [building-ids]
-       (println building-ids)
-       (let [building-ids (str/split building-ids #"__")]
-         (str building-ids)))
+       (let [building-ids (str/split building-ids #"__")
+             re-buildings (map #(buildings %) building-ids)
+             re-buildings (map (fn [building]
+                                 (into {} (for [[key value] building]
+                                            [(name key) value]))) re-buildings)
+             _ (println re-buildings)
+             id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
+         (println re-buildings)
+         (render "compare.vm"
+                 :id-to-name id->name
+                 :buildings re-buildings)))
+  
   (route/resources "/")
   (route/not-found "Not Found"))
 

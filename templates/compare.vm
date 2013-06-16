@@ -1,0 +1,120 @@
+<html>
+  <head>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.0.min.js"></script>
+    <script>
+      function goto() {
+        var buildings = $('#buildings').val().join("__");
+        window.location = document.location.origin + "/compare/" + buildings;
+      }
+    </script>
+  </head>
+
+  <body>
+    <table align="left">
+      <tr>
+        <td>
+          <select id="buildings" multiple>
+            #foreach ($key in $id-to-name.keySet())
+            <option value="$key" #if ($key == $id)selected#end>
+              $id-to-name.get($key)
+            </option>
+            #end
+          </select>
+        </td>
+        <td>
+          <input type="button" value="go" onclick="javascript:goto();"/>
+        </td>
+      </tr>
+    </table>
+
+    <br/>
+
+  <table width="100%" align="center" border="1">
+    <tr>
+      <td>楼盘名字</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("name")</td>
+      #end
+    </tr>
+    <tr>
+      <td>地段</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("loc")</td>
+      #end
+    </tr>
+    <tr>
+      <td>投资商</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("touzishan")</td>
+      #end
+    </tr>
+    <tr>
+      <td>开发商</td>
+      #foreach ($building in $buildings)      
+      <td>$building.get("kaifashan")</td>
+      #end
+    </tr>
+    <tr>
+      <td>物业</td>
+      #foreach ($building in $buildings)      
+      <td>$building.get("wuye")</td>
+      #end
+    </tr>
+    <tr>
+      <td>物业费</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("wuyefei")</td>
+      #end
+    </tr>
+    <tr>
+      <td>价格</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("price")</td>
+      #end
+    </tr>
+    <tr>
+      <td>教育配套</td>
+      #foreach ($building in $buildings)      
+      <td>$building.get("edu")</td>
+      #end
+    </tr>
+    <tr>
+      <td>交通</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("jiaotong")</td>
+      #end
+    </tr>
+    <tr>
+      <td>开盘时间</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("kaipan-date")</td>
+      #end
+    </tr>
+    <tr>
+      <td>交付时间</td>
+      #foreach ($building in $buildings)      
+      <td>$building.get("jiaofu-date")</td>
+      #end
+    </tr>
+    <tr>
+      <td>绿化率</td>
+      #foreach ($building in $buildings)
+      <td>${building.get("lvhualv")}%</td>
+      #end
+    </tr>
+    <tr>
+      <td>容积率</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("rongjilv")</td>
+      #end
+    </tr>
+    <tr>
+      <td>公摊面积</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("gongtanmianji")</td>
+      #end
+    </tr>
+ 
+  </table>
+  </body>
+</html>
