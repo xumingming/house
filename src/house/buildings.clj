@@ -2,7 +2,8 @@
 
 (def buildings
   {"xixi-haixiaohai"
-   {:name "西溪海小海"
+   {:id "xixi-haixiaohai"
+    :name "西溪海小海"
     :loc "天目山西路北侧，闲富北路与上和路交叉口西南角"
     :touzishan ""
     :kaifashan ""
@@ -22,7 +23,8 @@
     }
    
    "xinhu-guolin"
-   {:name "新湖果岭"
+   {:id "xinhu-guolin"
+    :name "新湖果岭"
     :loc ""
     :touzishan "浙江新兰得置业有限公司"
     :kaifashan "浙江新兰得置业有限公司"

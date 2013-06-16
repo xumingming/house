@@ -5,7 +5,8 @@
             [ring.velocity.core :refer [render]]
             [clojure.string :refer [split]])
   (:require [loan.core :refer :all])
-  (:require [house.buildings :refer :all]))
+  (:require [house.buildings :refer :all])
+  (:require [clojure.string :as str]))
 
 (defroutes app-routes
   (GET "/loan.htm" {params :params} []
@@ -37,25 +38,16 @@
   (GET "/" [] (str "test"))
   (GET "/building/:name" [name]
        (let [building (buildings name)
+             building (into {} (map (fn [[key value]] [(clojure.core/name key) value]) building))
              id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
-         (println id->name)
+         (println building)
          (render "building.vm"
-                 :id name
                  :id-to-name id->name
-                 :name (:name building)
-                 :loc (:loc building)
-                 :touzishan (:touzishan building)
-                 :kaifashan (:kaifashan building)
-                 :wuye (:wuye building)
-                 :wuyefei (:wuyefei building)
-                 :price (:price building)
-                 :edu (:edu building)
-                 :jiaotong (:jiaotong building)
-                 :kaipan-date (:kaipan-date building)
-                 :jiaofu-date (:jiaofu-date building)
-                 :lvhualv (* 100 (:lvhualv building))
-                 :rongjilv (:rongjilv building)
-                 :gongtanmianji (:gongtanmianji building))))
+                 :building building)))
+  (GET "/compare/:building-ids" [building-ids]
+       (println building-ids)
+       (let [building-ids (str/split building-ids #"__")]
+         (str building-ids)))
   (route/resources "/")
   (route/not-found "Not Found"))
 
