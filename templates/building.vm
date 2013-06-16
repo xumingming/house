@@ -1,5 +1,33 @@
 <html>
-  <table>
+  <head>
+    <script src="http://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.0.min.js"></script>
+    <script>
+      function goto() {
+        window.location = document.location.origin + "/building/" + $('#buildings').val();
+      }
+    </script>
+  </head>
+
+  <body>
+    <table align="left">
+      <tr>
+        <td>
+          <select id="buildings">
+            #foreach ($key in $id-to-name.keySet())
+            <option value="$key" #if ($key == $id)selected#end>
+              $id-to-name.get($key)
+            </option>
+            #end
+          </select>
+        </td>
+        <td>
+          <input type="button" value="go" onclick="javascript:goto();"/>
+        </td>
+      </tr>
+    </table>
+
+    <br/>
+  <table width="80%" align="center" border="1">
     <tr>
       <td>楼盘名字</td>
       <td>$name</td>
@@ -58,4 +86,5 @@
     </tr>
  
   </table>
+  </body>
 </html>
