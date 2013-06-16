@@ -35,7 +35,7 @@
                  :debj-pay-flow debj-pay-flow
                  :debj-total debj-total
                  :monthes (range loan-month))))
-  (GET "/" [] (str "test"))
+  (GET "/" [] (render "index.vm"))
   (GET "/building/:building-id" [building-id]
        (let [building (buildings building-id)
              building (into {} (for [[key value] building]
