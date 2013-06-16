@@ -7,7 +7,7 @@
   (:require [loan.core :refer :all]))
 
 (defroutes app-routes
-  (GET "/" {params :params} []
+  (GET "/loan.htm" {params :params} []
        (let [total-principal (Long/parseLong (or (:tp params) "500000"))
              monthly-rate (Double/valueOf (or (:mr params) "0.003225"))
              loan-month (Long/parseLong (or (:lm params) "360"))
@@ -24,7 +24,7 @@
              debj-pay-flow (get-pay-flow debj)
              debj-total (get-total debj)]
          (println debx-pay-flow)
-         (render "index.vm"
+         (render "loan.vm"
                  :total-principal total-principal
                  :monthly-rate monthly-rate
                  :loan-month loan-month
