@@ -25,7 +25,6 @@
                            :loan-month loan-month)
              debj-pay-flow (get-pay-flow debj)
              debj-total (get-total debj)]
-         (println debx-pay-flow)
          (render "loan.vm"
                  :total-principal total-principal
                  :monthly-rate monthly-rate
@@ -41,7 +40,6 @@
              building (into {} (for [[key value] building]
                                             [(name key) value]))
              id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
-         (println building)
          (render "building.vm"
                  :id-to-name id->name
                  :building building)))
@@ -52,9 +50,7 @@
              re-buildings (map (fn [building]
                                  (into {} (for [[key value] building]
                                             [(name key) value]))) re-buildings)
-             _ (println re-buildings)
              id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
-         (println re-buildings)
          (render "compare.vm"
                  :id-to-name id->name
                  :buildings re-buildings)))
