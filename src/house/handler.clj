@@ -6,11 +6,26 @@
             [clojure.string :refer [split]])
   (:require [loan.core :refer :all])
   (:require [house.buildings :refer :all])
-  (:require [clojure.string :as str]))
+  (:require [clojure.string :as str])
+  (:require [house.util :as util]))
+
+(defn cal-dibiao-distance [geo]
+  (println "geo: " geo ", first: " (first geo) ", second: " (second geo))
+  (let [ret (map (fn [loc]
+                   (str "离" (:name loc)
+                        (util/cal-distance (first (:geo loc))
+                                           (second (:geo loc))
+                                           (first geo)
+                                           (second geo))
+                        "公里"))
+                 dibiao)]
+    (str/join "," ret)))
 
 (defn ->view [building]
   (into {} (for [[key value] building]
-             [(name key) value])))
+             (if (#{:geo} key)
+               ["geo" (cal-dibiao-distance (:geo building))]
+               [(name key) value]))))
 
 (defroutes app-routes
   (GET "/loan.htm" {params :params} []

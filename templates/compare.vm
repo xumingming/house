@@ -51,6 +51,12 @@
       #end
     </tr>
     <tr>
+      <td class="title">地段</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("geo")</td>
+      #end
+    </tr>
+    <tr>
       <td class="title">投资商</td>
       #foreach ($building in $buildings)
       <td>$building.get("touzishan")</td>

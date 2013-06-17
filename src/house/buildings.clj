@@ -1,12 +1,10 @@
 (ns house.buildings)
 
 (def ^{:doc ""} dibiao
-  {
-   {:name "黄龙时代广场"
+  [{:name "黄龙时代广场"
     :geo [120.13115 30.278699]}
    {:name "武林广场"
-    :geo [120.169824 30.276804]}
-   })
+    :geo [120.169824 30.276804]}])
 
 (def buildings
   {"rongke-ailishan"

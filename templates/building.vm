@@ -43,6 +43,10 @@
       <td>$building.get("loc")</td>
     </tr>
     <tr>
+      <td class="title">地段</td>
+      <td>$building.get("geo")</td>
+    </tr>
+    <tr>
       <td class="title">投资商</td>
       <td>$building.get("touzishan")</td>
     </tr>
