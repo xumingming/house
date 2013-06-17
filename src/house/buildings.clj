@@ -1,10 +1,19 @@
 (ns house.buildings)
 
+(def ^{:doc ""} dibiao
+  {
+   {:name "黄龙时代广场"
+    :geo [120.13115 30.278699]}
+   {:name "武林广场"
+    :geo [120.169824 30.276804]}
+   })
+
 (def buildings
   {"rongke-ailishan"
    {:id "rongke-ailishan"
     :name "融科瑷骊山"
     :loc "之江国家旅游度假区象山路西"
+    :geo [120.071227 30.149159]
     :touzishan ""
     :kaifashan "浙江融科智地房地产开发有限公司"
     :wuye "第一太平融科物业管理（北京）有限公司杭州分公司"
@@ -27,6 +36,7 @@
    {:id "xixi-haixiaohai"
     :name "西溪海小海"
     :loc "天目山西路北侧，闲富北路与上和路交叉口西南角"
+    :geo [119.985697 30.247459]
     :touzishan ""
     :kaifashan ""
     :wuye "杭州金成物业公司"
@@ -48,6 +58,7 @@
    {:id "xinhu-guolin"
     :name "新湖果岭"
     :loc ""
+    :geo [119.983511 30.263306]
     :touzishan "浙江新兰得置业有限公司"
     :kaifashan "浙江新兰得置业有限公司"
     :wuye "浙江新湖物业管理有限公司"
