@@ -8,6 +8,10 @@
   (:require [house.buildings :refer :all])
   (:require [clojure.string :as str]))
 
+(defn ->view [building]
+  (into {} (for [[key value] building]
+             [(name key) value])))
+
 (defroutes app-routes
   (GET "/loan.htm" {params :params} []
        (let [total-principal (Long/parseLong (or (:tp params) "500000"))
@@ -37,8 +41,7 @@
   (GET "/" [] (render "index.vm"))
   (GET "/building/:building-id" [building-id]
        (let [building (buildings building-id)
-             building (into {} (for [[key value] building]
-                                            [(name key) value]))
+             building (->view building)
              id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
          (render "building.vm"
                  :id-to-name id->name
@@ -47,9 +50,7 @@
   (GET "/compare/:building-ids" [building-ids]
        (let [building-ids (str/split building-ids #"__")
              re-buildings (map #(buildings %) building-ids)
-             re-buildings (map (fn [building]
-                                 (into {} (for [[key value] building]
-                                            [(name key) value]))) re-buildings)
+             re-buildings (map ->view re-buildings)
              id->name (into {} (map (fn [pair] [(key pair) (:name (val pair))]) buildings))]
          (render "compare.vm"
                  :id-to-name id->name
