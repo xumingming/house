@@ -28,7 +28,28 @@
     :hushu 835
     :cheweishu 0
     }
-   
+
+   "zhongan-baimashanzhuang"
+   {:id "zhongan-baimashanzhuang"
+    :name "众安-白马山庄"
+    :loc "余杭区闲林镇留和路浙江科技学院西北侧	"
+    :geo [120.023559 30.223168]
+    :touzishan "众安房产"
+    :kaifashan ""
+    :wuye ""
+    :wuyefei 100
+    :price 9500
+    :edu "余杭镇第一幼儿园沈家店分园"
+    :jiaotong "483路,484路,481路,482路"
+    :kaipan-date "2012-09-23"
+    :jiaofu-date "2014"
+    :lvhualv 0.3
+    :rongjilv 1.3
+    :gongtanmianji 0.00
+    :zhuangxiu "毛坯 精装"
+    :hushu 992
+    :cheweishu 99999
+    }
 
    "xixi-haixiaohai"
    {:id "xixi-haixiaohai"
@@ -64,15 +85,15 @@
     :price 10000
     :edu     ["杭州英特外国语学校"]
     #_["杭州英特外国语学校"
-     "余杭镇第一中学教育集团镇中校区"
-     "余杭镇第一幼儿园"
-     "龙文教育"
-     "余杭中学"
-     "国泰·西园幼儿园"
-     "杭州波达塑业有限公司研究开发中心"
-     "阳光宝贝方汇幼儿园"
-     "杭州绿城育华桃花源学校"
-     "国泰·西园儿童之家"]
+       "余杭镇第一中学教育集团镇中校区"
+       "余杭镇第一幼儿园"
+       "龙文教育"
+       "余杭中学"
+       "国泰·西园幼儿园"
+       "杭州波达塑业有限公司研究开发中心"
+       "阳光宝贝方汇幼儿园"
+       "杭州绿城育华桃花源学校"
+       "国泰·西园儿童之家"]
     :jiaotong "5号线工教路站"
     :kaipan-date "2011-10"
     :jiaofu-date "2014-06"
