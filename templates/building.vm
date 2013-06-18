@@ -40,12 +40,9 @@
     </tr>
     <tr>
       <td class="title">地段</td>
-      <td>$building.get("loc")</td>
-    </tr>
-    <tr>
-      <td class="title">地段</td>
       <td>
-        $building.get("geo")
+        $building.get("loc")<br/><br/>
+        $building.get("geo")<br/>
         <img src="$building.get("map")"/>
       </td>
     </tr>

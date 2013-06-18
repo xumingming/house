@@ -12,14 +12,14 @@
 (defn cal-dibiao-distance [geo]
   (println "geo: " geo ", first: " (first geo) ", second: " (second geo))
   (let [ret (map (fn [loc]
-                   (str "离" (:name loc)
+                   (str "离" (:name loc) "<b>"
                         (util/cal-distance (first (:geo loc))
                                            (second (:geo loc))
                                            (first geo)
                                            (second geo))
-                        "公里"))
+                        "</b>公里"))
                  dibiao)]
-    (str/join "," ret)))
+    (str/join "<br/>" ret)))
 
 (defn ->view [building]
   (let [ret (into {} (for [[key value] building]
