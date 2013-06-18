@@ -1,9 +1,10 @@
 <html>
   <body>
-    <ul>
-      <li><a href="/building/xixi-haixiaohai">查看楼盘</a></li>
-      <li><a href="/compare/xixi-haixiaohai__rongke-ailishan">对不同楼盘进行比较</a></li>
-      <li><a href="/loan.htm">贷款计算器</a></li>
-    </ul>
+    <div style="font-size:20px;margin-left:45%">
+      <a href="/building/xixi-haixiaohai">查看楼盘</a><br/>
+      <a href="/compare/xixi-haixiaohai__rongke-ailishan">对不同楼盘进行比较</a><br/>
+      <a href="/loan.htm">贷款计算器</a><br/>
+      <a href="https://github.com/xumingming/house">看看代码</a><br/>
+    </div>
   </body>
 </html>
