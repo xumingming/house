@@ -77,7 +77,7 @@
     <tr>
       <td class="title">物业费</td>
       #foreach ($building in $buildings)
-      <td>$building.get("wuyefei")</td>
+      <td>$building.get("wuyefei")元/平米/月</td>
       #end
     </tr>
     <tr>
