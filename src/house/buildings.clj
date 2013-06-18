@@ -7,7 +7,30 @@
     :geo [120.169824 30.276804]}])
 
 (def buildings
-  {"rongke-ailishan"
+  {"lvcheng-feicuicheng"
+   {:id "lvcheng-feicuicheng"
+    :name "绿城翡翠城"
+    :loc "余杭高教路和五常大道交汇处"
+    :geo [120.03051 30.244214]
+    :touzishan "绿城房地产集团有限公司"
+    :kaifashan "杭州翡翠城房地产开发有限公司"
+    :wuye "浙江绿城物业管理公司"
+    :wuyefei 2.3
+    :price 16000
+    :edu "浙江科技学院,浙江工业大学屏峰校区"
+    :jiaotong "3号线藕花洲大街站,346路,367路"
+    :kaipan-date "2012-10-02"
+    :jiaofu-date "2013"
+    :lvhualv 0.4
+    :rongjilv 1.30
+    :gongtanmianji 10
+    :zhuangxiu "毛坯"
+    :hushu 8500
+    :cheweishu 2125
+    :homepage "http://hz.fang.anjuke.com/loupan/239002.html"
+    }
+   
+   "rongke-ailishan"
    {:id "rongke-ailishan"
     :name "融科瑷骊山"
     :loc "之江国家旅游度假区象山路西"
