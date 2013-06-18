@@ -94,7 +94,10 @@
       <td class="title">公摊面积</td>
       <td>$building.get("gongtanmianji")</td>
     </tr>
- 
+    <tr>
+      <td class="title">主页</td>
+      <td><a href="$building.get("homepage")">$building.get("homepage")</a></td>
+    </tr>
   </table>
   </body>
 </html>

@@ -27,6 +27,7 @@
     :zhuangxiu "毛坯"
     :hushu 835
     :cheweishu 0
+    :homepage "http://hz.fang.anjuke.com/loupan/248282.html"
     }
 
    "zhongan-baimashanzhuang"
@@ -49,6 +50,7 @@
     :zhuangxiu "毛坯 精装"
     :hushu 992
     :cheweishu 99999
+    :homepage "http://hz.fang.anjuke.com/loupan/246950.html"
     }
 
    "xixi-haixiaohai"
@@ -71,6 +73,7 @@
     :zhuangxiu "毛坯"
     :hushu 900
     :cheweishu 871
+    :homepage "http://hz.fang.anjuke.com/loupan/246960.html"
     }
    
    "xinhu-guolin"
@@ -103,5 +106,6 @@
     :zhuangxiu "毛坯"
     :hushu 2330
     :cheweishu 2302
+    :homepage "http://hz.fang.anjuke.com/loupan/238636.html"
     }}
   )

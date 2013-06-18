@@ -128,7 +128,12 @@
       <td>$building.get("gongtanmianji")</td>
       #end
     </tr>
- 
+    <tr>
+      <td class="title">主页</td>
+      #foreach ($building in $buildings)
+      <td><a href="$building.get("homepage")">$building.get("homepage")</a></td>
+      #end
+    </tr>
   </table>
   </body>
 </html>
