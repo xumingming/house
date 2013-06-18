@@ -23,8 +23,9 @@
 
 (defn ->view [building]
   (into {} (for [[key value] building]
-             (if (#{:geo} key)
-               ["geo" (cal-dibiao-distance (:geo building))]
+             (case key
+               :geo ["geo" (cal-dibiao-distance (:geo building))]
+               :lvhualv ["lvhualv" (str (* (:lvhualv building) 100) "%")]
                [(name key) value]))))
 
 (defroutes app-routes

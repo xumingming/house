@@ -84,7 +84,7 @@
     </tr>
     <tr>
       <td class="title">绿化率</td>
-      <td>${building.get("lvhualv")}%</td>
+      <td>${building.get("lvhualv")}</td>
     </tr>
     <tr>
       <td class="title">容积率</td>
@@ -96,7 +96,7 @@
     </tr>
     <tr>
       <td class="title">主页</td>
-      <td><a href="$building.get("homepage")">$building.get("homepage")</a></td>
+      <td><a target="_blank" href="$building.get("homepage")">$building.get("homepage")</a></td>
     </tr>
   </table>
   </body>

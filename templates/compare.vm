@@ -113,7 +113,7 @@
     <tr>
       <td class="title">绿化率</td>
       #foreach ($building in $buildings)
-      <td>${building.get("lvhualv")}%</td>
+      <td>${building.get("lvhualv")}</td>
       #end
     </tr>
     <tr>
@@ -131,7 +131,7 @@
     <tr>
       <td class="title">主页</td>
       #foreach ($building in $buildings)
-      <td><a href="$building.get("homepage")">$building.get("homepage")</a></td>
+      <td><a target="_blank" href="$building.get("homepage")">$building.get("homepage")</a></td>
       #end
     </tr>
   </table>
