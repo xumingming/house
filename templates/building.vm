@@ -44,7 +44,10 @@
     </tr>
     <tr>
       <td class="title">地段</td>
-      <td>$building.get("geo")</td>
+      <td>
+        $building.get("geo")
+        <img src="$building.get("map")"/>
+      </td>
     </tr>
     <tr>
       <td class="title">投资商</td>

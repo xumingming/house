@@ -22,11 +22,19 @@
     (str/join "," ret)))
 
 (defn ->view [building]
-  (into {} (for [[key value] building]
-             (case key
-               :geo ["geo" (cal-dibiao-distance (:geo building))]
-               :lvhualv ["lvhualv" (str (* (:lvhualv building) 100) "%")]
-               [(name key) value]))))
+  (let [ret (into {} (for [[key value] building]
+                       (case key
+                         :geo ["geo" (cal-dibiao-distance (:geo building))]
+                         :lvhualv ["lvhualv" (str (* (:lvhualv building) 100) "%")]
+                         [(name key) value])))
+        geo (str/join "," (:geo building))
+        map-url (str "http://api.map.baidu.com/staticimage?center="
+                     geo
+                     "&zoom=15&width=430&height=200&markers="
+                     geo
+                     "&markerStyles=l,A")
+        ret (assoc ret "map" map-url)]
+    ret))
 
 (defroutes app-routes
   (GET "/loan.htm" {params :params} []
