@@ -29,6 +29,29 @@
     :cheweishu 2125
     :homepage "http://hz.fang.anjuke.com/loupan/239002.html"
     }
+
+   "dahua-haipaifengfan"
+   {:id "dahua-haipaifengfan"
+    :name "大华海派风范"
+    :loc "文一西路北、同城印象东侧"
+    :geo [119.956511 30.274644]
+    :touzishan "浙江大华房地产开发有限公司"
+    :kaifashan "浙江大华房地产开发有限公司"
+    :wuye "彩虹物业有限公司"
+    :wuyefei 1.5
+    :price 9200
+    :edu "余杭中学(太炎路),余杭镇第一中学教育集团镇中校区"
+    :jiaotong "5号线余杭塘路站"
+    :kaipan-date "2013-04-13"
+    :jiaofu-date "2015-03-30"
+    :lvhualv 0.316
+    :rongjilv 2.30
+    :gongtanmianji 10
+    :zhuangxiu "毛坯"
+    :hushu 1385
+    :cheweishu 1386
+    :homepage "http://hz.fang.anjuke.com/loupan/240423.html"
+    }
    
    "rongke-ailishan"
    {:id "rongke-ailishan"
