@@ -7,7 +7,30 @@
     :geo [120.169824 30.276804]}])
 
 (def buildings
-  {"lvcheng-feicuicheng"
+  {"wangke-qixianjun"
+   {:id "wangke-qixianjun"
+    :name "万科七贤郡"
+    :loc "万科良渚文化村内（近东西大道）"
+    :geo [120.02866 30.378027]
+    :touzishan "浙江万科南都房地产有限公司"
+    :kaifashan "杭州良渚文化村开发有限公司"
+    :wuye ""
+    :wuyefei 0
+    :price 10000
+    :edu "良渚职业高中"
+    :jiaotong "313路,348路"
+    :kaipan-date "2012-10"
+    :jiaofu-date "2014"
+    :lvhualv 0.3
+    :rongjilv 1.30
+    :gongtanmianji 10
+    :zhuangxiu "精装修"
+    :hushu 1140
+    :cheweishu 0
+    :homepage "http://hz.fang.anjuke.com/loupan/246961.html"
+    }
+
+   "lvcheng-feicuicheng"
    {:id "lvcheng-feicuicheng"
     :name "绿城翡翠城"
     :loc "余杭高教路和五常大道交汇处"
