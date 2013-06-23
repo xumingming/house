@@ -134,6 +134,12 @@
       <td><a target="_blank" href="$building.get("homepage")">$building.get("homepage")</a></td>
       #end
     </tr>
+    <tr>
+      <td class="title">备注</td>
+      #foreach ($building in $buildings)
+      <td>$building.get("note")</td>
+      #end
+    </tr>
   </table>
   </body>
 </html>

@@ -28,6 +28,7 @@
     :hushu 1140
     :cheweishu 0
     :homepage "http://hz.fang.anjuke.com/loupan/246961.html"
+    :note ""
     }
 
    "lvcheng-feicuicheng"
@@ -51,6 +52,7 @@
     :hushu 8500
     :cheweishu 2125
     :homepage "http://hz.fang.anjuke.com/loupan/239002.html"
+    :note "不能用公积金贷款"
     }
 
    "dahua-haipaifengfan"
@@ -74,6 +76,7 @@
     :hushu 1385
     :cheweishu 1386
     :homepage "http://hz.fang.anjuke.com/loupan/240423.html"
+    :note ""
     }
    
    "rongke-ailishan"
@@ -97,6 +100,7 @@
     :hushu 835
     :cheweishu 0
     :homepage "http://hz.fang.anjuke.com/loupan/248282.html"
+    :note ""
     }
 
    "zhongan-baimashanzhuang"
@@ -120,6 +124,7 @@
     :hushu 992
     :cheweishu 99999
     :homepage "http://hz.fang.anjuke.com/loupan/246950.html"
+    :note ""
     }
 
    "xixi-haixiaohai"
@@ -143,6 +148,7 @@
     :hushu 900
     :cheweishu 871
     :homepage "http://hz.fang.anjuke.com/loupan/246960.html"
+    :note ""
     }
    
    "xinhu-guolin"
@@ -176,5 +182,6 @@
     :hushu 2330
     :cheweishu 2302
     :homepage "http://hz.fang.anjuke.com/loupan/238636.html"
+    :note ""
     }}
   )

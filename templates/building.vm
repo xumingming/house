@@ -98,6 +98,10 @@
       <td class="title">主页</td>
       <td><a target="_blank" href="$building.get("homepage")">$building.get("homepage")</a></td>
     </tr>
+    <tr>
+      <td class="title">备注</td>
+      <td>$building.get("note")</td>
+    </tr>
   </table>
   </body>
 </html>
