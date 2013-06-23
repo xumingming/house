@@ -43,8 +43,8 @@
     :price 16000
     :edu "浙江科技学院,浙江工业大学屏峰校区"
     :jiaotong "3号线藕花洲大街站,346路,367路"
-    :kaipan-date "2012-10-02"
-    :jiaofu-date "2013"
+    :kaipan-date "2013-07-05"
+    :jiaofu-date "2015-12-31"
     :lvhualv 0.4
     :rongjilv 1.30
     :defanglv 0.76
