@@ -91,8 +91,8 @@
       <td>$building.get("rongjilv")</td>
     </tr>
     <tr>
-      <td class="title">公摊面积</td>
-      <td>$building.get("gongtanmianji")</td>
+      <td class="title">得房率</td>
+      <td>$building.get("defanglv")%</td>
     </tr>
     <tr>
       <td class="title">主页</td>

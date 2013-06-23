@@ -123,9 +123,9 @@
       #end
     </tr>
     <tr>
-      <td class="title">公摊面积</td>
+      <td class="title">得房率</td>
       #foreach ($building in $buildings)
-      <td>$building.get("gongtanmianji")</td>
+      <td>$building.get("defanglv")%</td>
       #end
     </tr>
     <tr>

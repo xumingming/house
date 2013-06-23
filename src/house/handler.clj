@@ -26,6 +26,7 @@
                        (case key
                          :geo ["geo" (cal-dibiao-distance (:geo building))]
                          :lvhualv ["lvhualv" (str (* (:lvhualv building) 100) "%")]
+                         :defanglv ["defanglv" (* (:defanglv building) 100)]
                          [(name key) value])))
         geo (str/join "," (:geo building))
         map-url (str "http://api.map.baidu.com/staticimage?center="

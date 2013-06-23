@@ -23,7 +23,7 @@
     :jiaofu-date "2014"
     :lvhualv 0.3
     :rongjilv 1.30
-    :gongtanmianji 10
+    :defanglv 0
     :zhuangxiu "精装修"
     :hushu 1140
     :cheweishu 0
@@ -46,7 +46,7 @@
     :jiaofu-date "2013"
     :lvhualv 0.4
     :rongjilv 1.30
-    :gongtanmianji 10
+    :defanglv 0.76
     :zhuangxiu "毛坯"
     :hushu 8500
     :cheweishu 2125
@@ -69,7 +69,7 @@
     :jiaofu-date "2015-03-30"
     :lvhualv 0.316
     :rongjilv 2.30
-    :gongtanmianji 10
+    :defanglv 0
     :zhuangxiu "毛坯"
     :hushu 1385
     :cheweishu 1386
@@ -92,7 +92,7 @@
     :jiaofu-date ""
     :lvhualv 0.00
     :rongjilv 1.86
-    :gongtanmianji 10
+    :defanglv 0
     :zhuangxiu "毛坯"
     :hushu 835
     :cheweishu 0
@@ -115,7 +115,7 @@
     :jiaofu-date "2014"
     :lvhualv 0.3
     :rongjilv 1.3
-    :gongtanmianji 0.00
+    :defanglv 0
     :zhuangxiu "毛坯 精装"
     :hushu 992
     :cheweishu 99999
@@ -138,7 +138,7 @@
     :jiaofu-date "2014-12"
     :lvhualv 0.3395
     :rongjilv 2.41
-    :gongtanmianji 10
+    :defanglv 0
     :zhuangxiu "毛坯"
     :hushu 900
     :cheweishu 871
@@ -171,7 +171,7 @@
     :jiaofu-date "2014-06"
     :lvhualv 0.36
     :rongjilv 1.2
-    :gongtanmianji 10
+    :defanglv 0
     :zhuangxiu "毛坯"
     :hushu 2330
     :cheweishu 2302
