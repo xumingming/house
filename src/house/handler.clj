@@ -4,7 +4,7 @@
             [compojure.route :as route]
             [ring.velocity.core :refer [render]]
             [clojure.string :refer [split]])
-  (:require [loan.core :refer :all])
+  (:require [house.loan :refer :all])
   (:require [house.buildings :refer :all])
   (:require [clojure.string :as str])
   (:require [house.util :as util]))
